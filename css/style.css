@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Roboto Slab", "Times New Roman", sans-serif;
 
 }
 
@@ -16,7 +17,7 @@ body {
 p {
 	margin: 0 0 11px 0px;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 18px;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -180,6 +181,11 @@ div.top-form {
 	opacity: 0.9;
 }
 
+.front-nav ul li a:hover,
+.companies ul li a:hover {
+	opacity: 1;
+}
+
 .front-nav ul li a img {
 	float: left;
 	width: 74px;
@@ -237,8 +243,8 @@ div.top-form {
 	/*position: absolute;
 	top: 0;
 	left: 12px;*/
-	padding-top: 45px;
-    padding-left: 40px;
+	padding-top: 40px;
+    padding-left: 41px;
 }
 
 .front-monitor-windows {
@@ -489,21 +495,139 @@ div.top-form {
 	position: fixed;
 	right: 20px;
 	bottom: 20.25rem;
+
+	display: none;
 }
 
-.scrollToTop {
+.scrollToTop {	
 	position: absolute;
 	top: 34%;
 	right: calc(50% - 10px);
+
+	display: none;
 }
 
 .scrollToTop img {
 	width: 20px;
 	height: 20px;
+
+	display: none;
 }
+
+/* Others */
+div.img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+@keyframes pisca {
+	0% {text-shadow: 2px 2px 8px purple;font-size: 1.5em;}
+  	5% {text-shadow: 2px 2px 8px yellow;font-size: 1.6em;}
+  	10% {text-shadow: 2px 2px 8px blue;font-size: 1.5em;}
+  	15% {text-shadow: 2px 2px 8px green;font-size: 1.6em;}
+  	20% {text-shadow: 2px 2px 8px red;font-size: 1.5em;}
+  	25% {text-shadow: 2px 2px 8px purple;font-size: 1.6em;}
+  	30% {text-shadow: 2px 2px 8px yellow;font-size: 1.5em;}
+  	35% {text-shadow: 2px 2px 8px blue;font-size: 1.6em;}
+  	40% {text-shadow: 2px 2px 8px green;font-size: 1.5em;}
+  	45% {text-shadow: 2px 2px 8px red;font-size: 1.6em;}
+  	50% {text-shadow: 2px 2px 8px purple;font-size: 1.5em;}
+  	55% {text-shadow: 2px 2px 8px yellow;font-size: 1.6em;}
+  	60% {text-shadow: 2px 2px 8px blue;font-size: 1.5em;}
+  	65% {text-shadow: 2px 2px 8px green;font-size: 1.6em;}
+  	70% {text-shadow: 2px 2px 8px red;font-size: 1.5em;}
+  	75% {text-shadow: 2px 2px 8px purple;font-size: 1.6em;}
+  	80% {text-shadow: 2px 2px 8px yellow;font-size: 1.5em;}
+  	85% {text-shadow: 2px 2px 8px blue;font-size: 1.6em;}
+  	90% {text-shadow: 2px 2px 8px green;font-size: 1.5em;}
+  	95% {text-shadow: 2px 2px 8px red;font-size: 1.6em;}
+  	100% {text-shadow: 2px 2px 8px red;font-size: 1.5em;}
+}
+
+.text-information {
+	margin: 30px 0;
+	text-align: center;
+	text-shadow: 2px 2px 8px red;
+}
+
+.text-information:hover {
+	animation-name: pisca;
+  	animation-duration: 2s;
+
+}
+
+.img-notebook {
+	position: relative;
+	width: 640px;
+	height: 400px;
+}
+
+.img-notebook textarea {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	resize: none;
+	outline: none;
+	border: 2px solid #ccc;
+	background-repeat: no-repeat;
+}
+
+.img-notebook textarea:nth-child(1) {
+	background-image: url('../images/img-informacoes/notebook2.png');
+}
+
+.img-notebook textarea:nth-child(2) {
+	background-image: url('../images/img-informacoes/notebook_oficial2.png');
+	width: 150px;
+	border-right: 2px solid #F44D27;
+	resize: horizontal;
+}
+
+div.img2 {
+	text-align: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+div.img-container {
+	padding: 30px;
+	margin-top: 25px;
+	text-align: center;
+	align-items: center;
+	border: 7px solid #ccc;
+	border-style: outset;
+	background-color: #fef9f9;
+	box-shadow: 10px 10px 8px 8px #bbb;
+}
+
+.img-rotate:hover {
+	transform: rotateY(180deg);
+	transition-delay: 0.5s;
+	transition-duration: 2s;
+}
+
+.gif {
+	padding: 10px 2%;
+	text-align: center;
+}
+
+.gif img {
+	margin: 30px 5%;
+	border: none;
+}
+/* /Others */
 
 /* Media */
 @media screen and (max-width: 888px) {
+	.about-text {
+		height: 345px;
+	}
+
 	div.top-form {
 		float: none;
 		display: inline-block;
@@ -527,6 +651,7 @@ div.top-form {
 }
 
 @media screen and (max-width: 800px) {
+
 	.container {
 		overflow: hidden;
 	}
@@ -567,8 +692,8 @@ div.top-form {
 
 	.front-monitor-windows {
 		position: absolute;
-		top: 45.5px;
-		right: calc(50% - 113px);
+		top: 40px;
+		right: calc(50% - 114px);
 	}
 
 	.front-download-type {
@@ -610,7 +735,11 @@ div.top-form {
 
 @media screen and (max-width: 400px) {
 	.about {
-		height: 680px;
+		height: 780px;
+	}
+
+	.about-text {
+		height: 545px;
 	}
 
 	.front-content {
@@ -622,13 +751,190 @@ div.top-form {
 		width: 100%;
 	}
 
+	.front-download-type {
+		margin-bottom: 30px;
+	}
+
 	.site-source {
 		right: 10%;
 	}
 
 	.sfc-member {
+		margin-top: 15px;
 		right: 10%;		
 	}
+}
+
+@media screen and (max-width: 320px) {
+	.top a img {
+		width: 60px;
+		height: 24px;
+	}
+
+	.top-text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	div.top-form {
+		float: left;
+		width: 90%;
+		margin: 10px 4%;
+	}
+
+	.top-form form input[type=text] {
+		display: none;	    
+	}
+
+	.about-text {
+		width: 100%;
+		height: 695px;
+		float: left;
+	}
+
+	.about-text p {
+		font-size: 16px;
+		line-height: 24.4px;
+		margin-bottom: 10px;
+	}
+
+	.about-text p a {
+		text-decoration: none;
+		color: #0388a6;
+		transition-duration: 0.3s;
+		transition-property: color;
+		cursor: pointer;
+	}
+
+	.about-img {
+		display: none;
+	}
+
+
+	.front-content {
+		width: 100%;	
+	}
+
+	.front-nav ul li  {
+		margin-right: 0;
+		width: 100%;
+		height: 5em;
+		line-height: 16px;
+	}
+
+	.front-nav ul li a  {
+		height: 86px;
+		padding-left: 2px;
+
+	}
+
+	.front-nav ul li a img {
+		display: none;
+	}
+
+	.front-nav ul li h3 {
+		font-size: 18px;
+		color: #f14e32;
+	}
+
+	.front-nav ul li p {
+		font-size: 13px;
+		font-weight: 17.6px;
+	}
+
+	.front-download {
+		float: left;
+		width: 100%;
+		height: 450px;
+	}
+
+	.front-download .front-monitor {
+		background-image: none;
+		background-color: #00909A;
+		width: calc(100% - 4px);
+		height: 200px;
+	}
+
+	.front-monitor-windows {
+		width: 100px;
+		height: auto;
+		top: 10px;
+		right: calc(50% - 50px);
+	}
+
+	.front-monitor-windows h4 {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.front-monitor-windows span.version {
+		font-size: 18px;
+		font-weight: bold;
+		display: block;
+		margin-bottom: 6px;
+	}
+
+	.front-monitor-windows a {
+		cursor: pointer;
+		font-size: 12px;
+		color: #eee;
+	}
+
+	.front-monitor-windows span.realse-date {
+		font-size: 12px;
+	}
+
+	.front-monitor-windows a.btn1 {
+		width: 100px;
+	}
+
+	.front-monitor-windows a.btn1 span {
+		display: none;
+	}
+
+	.front-download-type {
+		margin-top: 12px;
+	}
+
+	.front-download-type table tbody tr td a.gui {
+		background-image: none;
+	}
+
+	.front-download-type table tbody tr td a.older-releases {
+		background-image: none;
+	}
+
+	.front-download-type table tbody tr td a.mac {
+		background-image: none;
+	}
+
+	.front-download-type table tbody tr td a.source {
+		background-image: none;
+	}
+
+	.companies ul li {
+		width: 100%;
+	    height: 65px;
+	    margin: 0 0 25px -5px;
+	}
+
+	.companies ul li a {
+		background-size: 90px 50px;
+	    width: 90px;
+	    height: 50px;
+	}
+
+	.footer{
+		padding: 30px 0 60px;
+	    margin-bottom: 50px;
+	    height: 160px;	        
+	}
+
+	.sfc-member {
+		margin-top: 60px;
+	}
+
+
 }
 
 
